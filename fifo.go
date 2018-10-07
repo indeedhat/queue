@@ -43,7 +43,7 @@ func (q *FifoQueue) Empty() bool {
 }
 
 func (q *FifoQueue) Full() bool {
-  if 0 >= q.maxSize || q.count >= q.maxSize {
+  if 0 >= q.maxSize || q.count <= q.maxSize {
     return false
   }
 
