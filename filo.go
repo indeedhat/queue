@@ -39,7 +39,7 @@ func (q *FiloQueue) Empty() bool {
 }
 
 func (q *FiloQueue) Full() bool {
-  if 0 >= q.maxSize || q.count >= q.maxSize {
+  if 0 >= q.maxSize || q.count <= q.maxSize {
     return false
   }
 
